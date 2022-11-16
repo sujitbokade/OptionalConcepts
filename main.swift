@@ -13,7 +13,7 @@ func getStatus(name: String?) {
   }
   print(fName)
 }
-  getStatus(name: "Sujit")
+getStatus(name: "Sujit")
 
 
 // if else
@@ -43,7 +43,7 @@ func position (of string: String, in array:[String]) -> Int {
       return i
     }
   }
-  return 0
+  return -1
 }
 let rahulPosition = position(of: "rahul", in: items)
 print(rahulPosition)
@@ -79,3 +79,89 @@ func getPersonData(){
 }
 getPersonData()
 
+
+extension String{
+  func printName(){
+    print(self)
+  }
+}
+var name: String = "ABCD"
+name.printName()
+
+
+var result: Any = "sujit"
+result = 10
+print(result)
+
+
+
+var a: Int = 12
+var b: Any = "sujit"
+b = 14
+
+let val = b as! Int
+print(a + val)
+
+
+var arr:[AnyObject] = ["Sujit" as AnyObject,1 as AnyObject,true as AnyObject]
+print(arr)
+
+                                     // Tuple Type 
+func minMaxValues(array:[Int]) -> (minValue:Int, maxValue: Int){
+  var currentMinValue = array[0]
+  var currentMaxValue = array[0]
+  for value in array[1..<array.count]{
+    if value < currentMinValue {
+      currentMinValue = value
+    }else if value > currentMaxValue{
+      currentMaxValue = value
+    }
+  }
+  return(currentMinValue, currentMaxValue)
+}
+
+print(minMaxValues(array: [10,54,2,8,6,25]))
+
+
+
+func statements(){
+  print("1st Statement")
+  defer{
+    print("3rd Statement")
+  }
+  print("2nd Statement")
+}
+statements()
+
+print("---------------")
+func displayFiles(){
+  print("1st file ")
+  do{
+   defer{ print("2nd File")} 
+    print("3rd File")
+  }
+  print("4th File")
+}
+displayFiles()
+
+print("---------------")
+
+func displayDefer(){
+  defer{print("1st Defer")}
+  defer{print("2nd Defer")}
+  do{print("3rd Defer")}
+}
+displayDefer()
+
+print("------------")
+
+let interval = 2
+for i in stride(from: 1, through: 10, by: interval){
+  print(i)
+}
+print("------------")
+
+let array1:[String] = ["sujit", "mahesh", "raj", "manish"]
+for(i,value) in array1.enumerated(){
+  print(i, value)
+}
