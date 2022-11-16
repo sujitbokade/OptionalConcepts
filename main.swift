@@ -34,8 +34,6 @@ if let haterStatus = getHatersStatus(weather:"Rainy") {
 }
 
 
-
-
 var items = ["sujit","hemant","rahul","raj"]
 func position (of string: String, in array:[String]) -> Int {
   for i in 0..<array.count{
@@ -61,7 +59,6 @@ class Person{
     self.lastName = lastName
     self.city = city
   }
-  
 }
 let person = Person(firstName:"sujit", lastName: nil, city: "Barshi")
 
@@ -119,7 +116,6 @@ func minMaxValues(array:[Int]) -> (minValue:Int, maxValue: Int){
   }
   return(currentMinValue, currentMaxValue)
 }
-
 print(minMaxValues(array: [10,54,2,8,6,25]))
 
 
@@ -136,8 +132,10 @@ statements()
 print("---------------")
 func displayFiles(){
   print("1st file ")
-  do{
-   defer{ print("2nd File")} 
+  do {
+   defer { 
+          print("2nd File")
+  } 
     print("3rd File")
   }
   print("4th File")
@@ -156,7 +154,7 @@ displayDefer()
 print("------------")
 
 let interval = 2
-for i in stride(from: 1, through: 10, by: interval){
+for i in stride(from: 1, through: 10, by: interval) {
   print(i)
 }
 print("-----------------")
@@ -169,8 +167,7 @@ for(i,value) in array1.enumerated(){
 print("-----------------")
 
 var number: Int = 1
-
-repeat{
+repeat {
   print(number)
   number += 1
-}while number <= 10
+} while number <= 10

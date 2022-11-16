@@ -13,17 +13,17 @@ var workingHr: Int = 0
 while day <= totalWorkingDays && workingHr < totalWorkingHrs {
   let check = Int.random(in: 1..<4)
   
-  if check == employeePresentFullTime {
-     print("Employee is Present Full Time")
-     dailyWage = fullDayHr * wagePerHr
-     workingHr += fullDayHr
-  } else if check == employeePresentPartTime {
-    print("Employee is Present Part Time")
-    dailyWage = partTimeHr * wagePerHr
-    workingHr += partTimeHr
-  } else {
-    print("Employee is Absent")
-  }
+  // if check == employeePresentFullTime {
+  //    print("Employee is Present Full Time")
+  //    dailyWage = fullDayHr * wagePerHr
+  //    workingHr += fullDayHr
+  // } else if check == employeePresentPartTime {
+  //   print("Employee is Present Part Time")
+  //   dailyWage = partTimeHr * wagePerHr
+  //   workingHr += partTimeHr
+  // } else {
+  //   print("Employee is Absent")
+  // }
   print("Daily wage for day \(day) is \(dailyWage)/- Rupees")
   totalWage += dailyWage
   day += 1
