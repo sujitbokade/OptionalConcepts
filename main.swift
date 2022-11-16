@@ -159,9 +159,18 @@ let interval = 2
 for i in stride(from: 1, through: 10, by: interval){
   print(i)
 }
-print("------------")
+print("-----------------")
 
 let array1:[String] = ["sujit", "mahesh", "raj", "manish"]
 for(i,value) in array1.enumerated(){
   print(i, value)
 }
+
+print("-----------------")
+
+var number: Int = 1
+
+repeat{
+  print(number)
+  number += 1
+}while number <= 10
