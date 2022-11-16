@@ -122,7 +122,7 @@ print(minMaxValues(array: [10,54,2,8,6,25]))
 
 func statements(){
   print("1st Statement")
-  defer{
+  defer {
     print("3rd Statement")
   }
   print("2nd Statement")
@@ -145,9 +145,9 @@ displayFiles()
 print("---------------")
 
 func displayDefer(){
-  defer{print("1st Defer")}
-  defer{print("2nd Defer")}
-  do{print("3rd Defer")}
+  defer {print("1st Defer")}
+  defer {print("2nd Defer")}
+  do {print("3rd Defer")}
 }
 displayDefer()
 
